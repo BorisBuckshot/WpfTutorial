@@ -55,11 +55,5 @@ namespace WpfTutorial
             saveDlg.ShowDialog();
         }
 
-        private void Send_Button_Click(object sender, RoutedEventArgs e)
-        {
-            userName = UsersName.Text;
-
-            MessageBox.Show($"Hello {userName}");
-        }
     }
 }
