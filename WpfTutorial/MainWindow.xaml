@@ -10,19 +10,15 @@
     <Window.Resources>
         <sys:String x:Key="strHelloAgain">Hello Again</sys:String>
 
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="FontSize" Value="40"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="Consola"/>
-        </Style>
-        
+
+
     </Window.Resources>
-    <StackPanel Orientation="Vertical">
-        <TextBlock HorizontalAlignment="Center"  TextWrapping="NoWrap" Text="Hello World" VerticalAlignment="Top" FontSize="40"/>
-        <TextBlock Text="{StaticResource strHelloAgain}" FontSize="40" HorizontalAlignment="Center"/>
-        <Button x:Name="Button1" Height="60" Width="300" HorizontalAlignment="Center" Content="Close Window" Click="Button1_Click"/>
-        <Button x:Name="BtnOpenFile" Height="60" Width="300" HorizontalAlignment="Center" Content="OpenFile" Click="BtnOpenFile_Click"/>
-        <Button x:Name="BtnSaveFile" Height="60" Width="300" HorizontalAlignment="Center" Content="OpenFile" Click="BtnSaveFile_Click"/>
-    </StackPanel>
+    <Canvas Background="Gray" Height="350" Width="525">
+        <Label Content="Name" Canvas.Left="30" Canvas.Top="24"/>
+        <TextBox Name="UsersName" Height="24" TextWrapping="Wrap" Text="Enter Name" Width="120" Canvas.Left="105" Canvas.Top="26"/>
+        <Button Content="Send" Margin="0" Width="75" Canvas.Left="255" Canvas.Top="24" Click="Send_Button_Click"/>
+
+    </Canvas>
+
+
 </Window>

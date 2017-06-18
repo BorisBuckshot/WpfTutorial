@@ -19,8 +19,11 @@ namespace WpfTutorial
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        string userName = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +53,13 @@ namespace WpfTutorial
         {
             SaveFileDialog saveDlg = new SaveFileDialog();
             saveDlg.ShowDialog();
+        }
+
+        private void Send_Button_Click(object sender, RoutedEventArgs e)
+        {
+            userName = UsersName.Text;
+
+            MessageBox.Show($"Hello {userName}");
         }
     }
 }
